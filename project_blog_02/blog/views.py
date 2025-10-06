@@ -1,12 +1,6 @@
 from django.shortcuts import render
 from django.http import Http404
 
-
-
-
-POSTS = {post['id']: post for post in posts}
-
-
 def index(request):
     template = 'blog/index.html'
     context = {'posts': posts[::-1]}
